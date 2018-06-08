@@ -12,7 +12,7 @@ https://github.com/Phidelux/vagrant-javaee-wildfly/blob/master/vagrant/conclusio
 
 
 
-
+#Developer
 comandi :
 <pre><code> vagrant up 
 </code></pre>
@@ -44,7 +44,7 @@ http://localhost:8082/SpringBootBasic/hello/Professore
 
 è possibile constatare se i progetti sono stati correttamente deployati
 
-comandi docker:
+#Docker:
 
 <pre><code>vagrant up 
 
