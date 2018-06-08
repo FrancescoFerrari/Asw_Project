@@ -24,9 +24,17 @@ per poter buildare e deployare i progetti contenuti dentro la directory deployme
 vagrant ssh dev 
 
 andare nella cartella /home/asw/_shared/script e far partire lo script deploy-project.sh
+questo comando ha il fine di deployare i due progetti contenenti nella directory deploy di cui uno già buildato (hello.war) e uno da buildare (SpringBootBasic) 
+la prima cosa che fa lo script è entrare dentro il progetto SpringBootBasic e buildarlo attraverso maven 
+successivamente procede al deploy di tutti i progetti buildati (*.war)
 
-fatto questo all' URL:
+finita l'esecuzione all' URL:
 
+http://localhost:8082/hello/hello
+
+http://localhost:8082/SpringBootBasic/hello/Professore
+
+è possibile constatare se i progetti sono stati correttamente deployati
 
 comandi docker:
 
