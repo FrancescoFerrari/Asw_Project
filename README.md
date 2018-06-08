@@ -16,16 +16,22 @@ https://github.com/Phidelux/vagrant-javaee-wildfly/blob/master/vagrant/conclusio
 comandi :
 <pre><code> vagrant up 
 </code></pre>
-vagrant up 
 
 fatto questo possiamo vedere all'url :
 http://localhost:8082/
 che wildfly è correttamente funzionante
+
 per poter buildare e deployare i progetti contenuti dentro la directory deployments invece bisogna:
 
-vagrant ssh dev 
+<pre><code> vagrant ssh dev 
+</code></pre>
 
-andare nella cartella /home/asw/_shared/script e far partire lo script deploy-project.sh
+andare nella cartella degi script eseguendo
+<pre><code>cd /home/asw/_shared/script
+</code></pre> e far partire lo script:
+
+<pre><code>sudo sh deploy-project.sh
+</code></pre>
 questo comando ha il fine di deployare i due progetti contenenti nella directory deploy di cui uno già buildato (hello.war) e uno da buildare (SpringBootBasic) 
 la prima cosa che fa lo script è entrare dentro il progetto SpringBootBasic e buildarlo attraverso maven 
 successivamente procede al deploy di tutti i progetti buildati (*.war)
@@ -40,11 +46,21 @@ http://localhost:8082/SpringBootBasic/hello/Professore
 
 comandi docker:
 
-vagrant up 
-vagrant ssh docker
-vagrant cd dockerproject
-docker build --tag=wildfly .
-docker run -p 8080:8080 -it wildfly
+<pre><code>vagrant up 
+
+</code></pre>
+
+<pre><code>vagrant ssh docker
+</code></pre>
+
+<pre><code>vagrant cd dockerproject
+</code></pre>
+
+<pre><code>docker build --tag=wildfly .
+</code></pre>
+
+<pre><code>docker run -p 8080:8080 -it wildfly
+</code></pre>
 
 
 fatto questo possiamo vedere all'url : 
