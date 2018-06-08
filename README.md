@@ -14,6 +14,8 @@ https://github.com/Phidelux/vagrant-javaee-wildfly/blob/master/vagrant/conclusio
 
 
 comandi :
+<pre><code> vagrant up 
+</code></pre>
 vagrant up 
 
 fatto questo possiamo vedere all'url :
